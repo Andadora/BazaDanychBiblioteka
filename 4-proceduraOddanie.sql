@@ -31,5 +31,7 @@ BEGIN
 		set LiczbaWypozyczonych -= 1, 
 		LiczbaDostepnych += 1
 		where IdKsiazki = @IdKsiazki
+		
+		delete from WypozyczoneKsiazki where IdWypozyczenia=@IdWypozyczenia
 	END
 END;
